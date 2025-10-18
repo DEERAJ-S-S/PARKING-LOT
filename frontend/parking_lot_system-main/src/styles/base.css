@@ -1,0 +1,38 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --success:#10b981;
+  --danger:#ef4444;
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter,system-ui,Arial; 
+  margin:0; background:var(--bg); 
+  color:#0f172a;
+}
+.app-shell{min-height:100vh; display:flex; flex-direction:column;}
+.topbar{background:var(--card); padding:12px 20px; display:flex; align-items:center; gap:20px; box-shadow:0 1px 2px rgba(0,0,0,0.05);}
+.brand{margin:0; font-size:1.1rem;}
+.nav{display:flex; gap:12px; margin-left:auto;}
+.navlink{padding:8px 10px; border-radius:6px; text-decoration:none; color:var(--muted);}
+.navlink.active{background:rgba(37,99,235,0.08); color:var(--accent);}
+.content{padding:20px; flex:1;}
+.footer{padding:12px 20px; background:transparent; color:var(--muted); font-size:0.9rem;}
+.card-row{display:flex; gap:12px; margin-bottom:18px;}
+.stat-card{background:var(--card); padding:16px; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.03); min-width:120px;}
+.stat-value{font-size:1.6rem; font-weight:700;}
+.stat-label{color:var(--muted); font-size:0.9rem;}
+.slot-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:12px;}
+.slot{background:var(--card); padding:10px; border-radius:8px; display:flex; flex-direction:column; gap:6px; align-items:flex-start; box-shadow:0 1px 2px rgba(0,0,0,0.03);}
+.slot.free{border-left:4px solid var(--success);}
+.slot.occupied{border-left:4px solid var(--danger); opacity:0.95;}
+.slot-code{font-weight:700;}
+.filter-row{display:flex; gap:8px; align-items:center; margin-bottom:12px;}
+form .row{display:flex; gap:12px; align-items:center; margin-bottom:8px;}
+input,select,button{padding:8px 10px; border-radius:6px; border:1px solid #e6e9ef;}
+button{background:var(--accent); color:white; border:none; cursor:pointer;}
+.tickets-list{display:flex; flex-direction:column; gap:8px;}
+.ticket{background:var(--card); padding:12px; border-radius:8px; display:flex; justify-content:space-between; align-items:center;}
+@media(max-width:600px){ .card-row{flex-direction:column;} .nav{display:none;} }
